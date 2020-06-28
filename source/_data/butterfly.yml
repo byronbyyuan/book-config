@@ -278,8 +278,8 @@ gitalk:
 # valine
 # https://valine.js.org
 valine:
-  appId: G4LOqiRgcRalOURyebfc3xo8-gzGzoHsz
-  appKey: jpP1rsqA2t1F9CrjNfp1SDe7  
+  appId: 
+  appKey:  
   enable: true # if you want use valine,please set this value is true
   pageSize: 10 # comment list page size
   avatar: monsterid # gravatar style https://valine.js.org/#/avatar
