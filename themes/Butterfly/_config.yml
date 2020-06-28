@@ -7,16 +7,15 @@
 #   name || link || icon
 
 menu:
-  首页: / || fas fa-home
-  归档: /archives/ || fas fa-archive
-  标签: /tags/ || fas fa-tags
-  分类: /categories/ || fas fa-folder-open
-  # 娱乐：/list/ ||fas fa-list:
-  #   - Music || /music/ || fas fa-music
-  #   - Movie || /movies/ || fas fa-video
-  链接: /link/ || fas fa-link
-  关于: /about/ || fas fa-heart
-  留言板: /leave/ || fas fa-comment-dots
+  Home: / || fas fa-home
+  Archives: /archives/ || fas fa-archive
+  Tags: /tags/ || fas fa-tags
+  Categories: /categories/ || fas fa-folder-open
+  List||fas fa-list:
+    - Music || /music/ || fas fa-music
+    - Movie || /movies/ || fas fa-video
+  Link: /link/ || fas fa-link
+  About: /about/ || fas fa-heart
 
 # Code Blocks (代碼相關)
 # --------------------------------------
@@ -31,14 +30,14 @@ code_word_wrap: false
 # copyright: Add the copyright information after copied content (複製的內容後面加上版權信息)
 copy:
   enable: true
-  copyright: true
+  copyright: false
 
 # social settings (社交圖標設置)
 # formal:
 #   icon: link || the description
 social:
-  fab fa-github: https://github.com/14138993 || Github
-  fas fa-envelope: mailto:14138993@qq.com || Email
+  fab fa-github: https://github.com/xxxxx || Github
+  fas fa-envelope: mailto:xxxxxx@gmail.com || Email
 
 # search (搜索)
 # --------------------------------------
@@ -56,10 +55,10 @@ algolia_search:
 
 # Local search
 local_search:
-  enable: true
+  enable: false
   labels:
-    input_placeholder: 搜索文章
-    hits_empty: "根据您的搜索内容为您匹配结果如下: ${query}" # if there are no result
+    input_placeholder: Search for Posts
+    hits_empty: "We didn't find any results for the search: ${query}" # if there are no result
 
 # Math (數學)
 # --------------------------------------
@@ -83,7 +82,7 @@ katex:
 # --------------------------------------
 
 # Favicon（網站圖標）
-favicon: /img/love.png
+favicon: /img/favicon.png
 
 # Avatar (頭像)
 avatar:
@@ -94,7 +93,7 @@ avatar:
 index_img:
 
 # if the banner of page not setting,it will show the top_img
-default_top_img: https://i.loli.net/2020/06/19/1JNwtkSa7sYunDc.jpg
+default_top_img: https://i.loli.net/2020/05/01/IuWi8QbHvzjlOPw.jpg
 
 # the banner image of archive page
 archive_img:
@@ -133,7 +132,7 @@ error_img:
 
 # A simple 404 page
 error_404:
-  enable: true
+  enable: false
   subtitle: 'Page Not Found'
   background: https://i.loli.net/2020/05/19/aKOcLiyPl2JQdFD.png
 
@@ -141,7 +140,7 @@ post_meta:
   page: # Home Page
     date_type: created # created or updated or both 主頁文章日期是創建日或者更新日或都顯示
     categories: true # true or false 主頁是否顯示分類
-    tags: true # true or false 主頁是否顯示標籤
+    tags: false # true or false 主頁是否顯示標籤
   post:
     date_type: both # created or updated or both 文章頁日期是創建日或者更新日或都顯示
     categories: true # true or false 文章頁是否顯示分類
@@ -173,18 +172,18 @@ toc:
 
 post_copyright:
   enable: true
-  decode: true
+  decode: false
   license: CC BY-NC-SA 4.0
   license_url: https://creativecommons.org/licenses/by-nc-sa/4.0/
 
 # Sponsor/reward
 reward:
-  enable: true
+  enable: false
   QR_code:
-    - img: /img/wechat.jpeg
+    - img: /img/wechat.jpg
       link:
       text: wechat
-    - img: /img/alipay.jpeg
+    - img: /img/alipay.jpg
       link:
       text: alipay
 
@@ -278,20 +277,20 @@ gitalk:
 # valine
 # https://valine.js.org
 valine:
-  appId: G4LOqiRgcRalOURyebfc3xo8-gzGzoHsz
-  appKey: jpP1rsqA2t1F9CrjNfp1SDe7  
-  enable: true # if you want use valine,please set this value is true
+  enable: false # if you want use valine,please set this value is true
+  appId: # leancloud application app id
+  appKey: # leancloud application app key
   pageSize: 10 # comment list page size
   avatar: monsterid # gravatar style https://valine.js.org/#/avatar
-  lang: zh-CN # i18n: zh-CN/zh-TW/en/ja
-  placeholder: 記得留下你的暱稱和郵箱....可以快速收到回復 # valine comment input placeholder(like: Please leave your footprints )
+  lang: en # i18n: zh-CN/zh-TW/en/ja
+  placeholder: Please leave your footprints # valine comment input placeholder(like: Please leave your footprints )
   guest_info: nick,mail,link #valine comment header info (nick/mail/link)
   recordIP: false # Record reviewer IP
   serverURLs: # This configuration is suitable for domestic custom domain name users, overseas version will be automatically detected (no need to manually fill in)
   bg: # valine background
   emojiCDN: # emoji CDN
-  enableQQ: true # enable the Nickname box to automatically get QQ Nickname and QQ Avatar
-  requiredFields: false # required fields (nick/mail)
+  enableQQ: false # enable the Nickname box to automatically get QQ Nickname and QQ Avatar
+  requiredFields: nick,mail # required fields (nick/mail)
   count: false # dispaly comment count in top_img
 
 # utterances
@@ -321,10 +320,10 @@ facebook_comments:
 
 # Chat Button [recommend]
 # It will create a button in the bottom right corner of website, and hide the origin button
-chat_btn: true
+chat_btn: false
 
 # The origin chat button is displayed when scrolling up, and the button is hidden when scrolling down
-chat_hide_show: true
+chat_hide_show: false
 
 # chatra
 # https://chatra.io/
@@ -355,7 +354,7 @@ gitter:
 
 since: 2020
 
-footer_custom_text: 今日事,今日毕
+footer_custom_text:
 
 footer_copyright: true
 
@@ -451,8 +450,7 @@ tag_ui: # 留空或 index
 # The formal of color: '#49B202'
 # The formal of image: url(http://xxxxxx.com/xxx.jpg)
 # White color will be shown as default
-
-background: 
+background:
 
 # Show the footer background image (same as top_img)
 footer_bg: false
@@ -470,12 +468,12 @@ canvas_ribbon:
   size: 150
   alpha: 0.6
   zIndex: -1
-  click_to_change: true
+  click_to_change: false
   mobile: false
 
 # Dynamic ribbon (動態彩帶)
 canvas_ribbon_piao:
-  enable: true
+  enable: false
   mobile: false
 
 # canvas_nest
@@ -491,13 +489,13 @@ canvas_nest:
 # Typewriter Effect (打字效果)
 # https://github.com/disjukr/activate-power-mode
 activate_power_mode:
-  enable: true
+  enable: false
   colorful: true # open particle animation (冒光特效)
-  shake: false #  open shake (抖動特效)
+  shake: true #  open shake (抖動特效)
 
 # Mouse click effects: fireworks (鼠標點擊效果: 煙火特效)
 fireworks:
-  enable: true
+  enable: false
   zIndex: 9999 # -1 or 9999
 
 # Mouse click effects: Heart symbol (鼠標點擊效果: 愛心)
@@ -518,7 +516,7 @@ display_mode: light
 
 # Beautify (美化頁面顯示)
 beautify:
-  enable: true
+  enable: false
   field: post # site/post
   title-prefix-icon: '\f0c1'
   title-prefix-icon-color: '#F47466'
@@ -555,14 +553,14 @@ subtitle:
   # source: 3  調用一句網（簡體） http://yijuzhan.com/
   # source: 4  調用今日詩詞（簡體） https://www.jinrishici.com/
   # subtitle 會先顯示 source , 再顯示 sub 的內容
-  source: 1
+  source: false
   # 如果有英文逗號' , ',請使用轉義字元 &#44;
   # 如果有英文雙引號' " ',請使用轉義字元 &quot;
   # 開頭不允許轉義字元，如需要，請把整個句子用雙引號包住
   # 如果關閉打字效果，subtitle只會顯示sub的第一行文字
   sub:
-    - 你想拥有你没有的能力，就要付出你没有付出的努力
-    - You need to learn to think and then write.
+    - 今日事&#44;今日畢
+    - Never put off till tomorrow what you can do today
 
 # Loading Animation (加載動畫)
 preloader: false
@@ -579,7 +577,7 @@ aside:
     description:
   card_announcement:
     enable: true
-    content: 坚持记录
+    content: This is my Blog
   card_recent_post:
     enable: true
     limit: 5 # if set 0 will show all
@@ -687,7 +685,7 @@ note:
 # position 彈窗位置
 # 可選 top-left / top-center / top-right / bottom-left / bottom-center / bottom-right
 snackbar:
-  enable: true
+  enable: false
   position: bottom-left
   bg_light: '#49b1f5' # The background color of Toast Notification in light mode
   bg_dark: '#121212' # The background color of Toast Notification in dark mode
@@ -709,19 +707,19 @@ pangu:
 # https://github.com/verlok/lazyload
 lazyload:
   enable: true
-  post: /img/loading.gifs
+  post: /img/loading.gif
 
 # PWA
 # See https://github.com/JLHwung/hexo-offline
 # ---------------
-pwa:
-  enable: false
-  manifest: /img/pwa/manifest.json
-  theme_color: "#fff"
-  apple_touch_icon: 
-  favicon_32_32: /img/pwa/144.png
-  favicon_16_16: /img/pwa/128.png
-  mask_icon: /img/love.png
+# pwa:
+#   enable: false
+#   manifest: /image/pwa/manifest.json
+#   theme_color: "#fff"
+#   apple_touch_icon: /image/pwa/apple-touch-icon.png
+#   favicon_32_32: /image/pwa/32.png
+#   favicon_16_16: /image/pwa/16.png
+#   mask_icon: /image/pwa/safari-pinned-tab.svg
 
 # Disable Baidu transformation on mobile devices (禁止百度轉碼)
 disable_baidu_transformation: true
@@ -738,10 +736,9 @@ fragment_cache: true
 # 插入代码到头部 </head> 之前 和 底部 </body> 之前
 inject:
   head:
-    - <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/sviptzk/HexoStaticFile@latest/Hexo/css/custom.min.css">
-    # - <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/sviptzk/HexoStaticFile@latest/Hexo/css/hideCategory.min.css"> 
+    # - <link rel="stylesheet" href="/xxx.css">
   bottom:
-    # - <script src="https://cdn.jsdelivr.net/gh/sviptzk/HexoStaticFile@latest/Hexo/js/hideCategory.min.js"></script>
+    # - <script src="xxxx"></script>
 
 # CDN
 # Don't modify the following settings unless you know how they work
@@ -749,10 +746,8 @@ inject:
 CDN:
   # main
   main_css: /css/index.css
-  awesome: https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css
   jquery: https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js
   main: /js/main.js
-  live2d_widget: /live2d-widget/autoload.js
   utils: /js/utils.js
 
   # comments
